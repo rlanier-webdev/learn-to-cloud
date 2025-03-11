@@ -18,7 +18,7 @@ This project focuses on using the Google Cloud CLI (gcloud) to automate basic Co
 
 ## Steps Taken
 
-1.  **Project Setup:**
+1. **Project Setup:**
 * Ensured the Google Cloud SDK (gcloud CLI) was installed and configured.
   
   **Windows**
@@ -42,13 +42,13 @@ This project focuses on using the Google Cloud CLI (gcloud) to automate basic Co
   ./google-cloud-sdk/install.sh
   ```
 * Selected a Google Cloud Platform project with the Compute Engine API enabled.
-  * PROJECT_ID = learn-to-cloud-441500
 * Set the project and zone using the following commands:
     ```bash
-    gcloud config set project learn-to-cloud-441500
+    gcloud config set project [PROJECT_ID]
     gcloud config set compute/zone us-central1-a
     ```
-1.  **Instance Creation:**
+
+2. **Instance Creation:**
 * Create a Compute Engine instance named `web-server-dev`.
 * Use the `us-central1-a` zone.
   - Zone of the instances to create.
@@ -62,14 +62,16 @@ This project focuses on using the Google Cloud CLI (gcloud) to automate basic Co
     ```bash
     gcloud compute instances create web-server-dev --zone=us-central1-a --machine-type=e2-micro --image-family=debian-11 --image-project=debian-cloud
     ```
-1. Instance Status Management:
+
+3. **Instance Status Management:**
 * Develop commands to start and stop the web-server-dev instance.
     ```bash
     gcloud compute instances start web-server-dev
     gcloud compute instances stop web-server-dev
     ```
 * Demonstrate how to check the instance's status using `gcloud compute instances describe web-server-dev`
-1. Instance Deletion:
+
+4. **Instance Deletion:**
 * Create a command to delete the web-server-dev instance.
     ```bash
     gcloud compute instances delete web-server-dev
@@ -91,4 +93,5 @@ This project focuses on using the Google Cloud CLI (gcloud) to automate basic Co
     - Boot disk → Check if it will be deleted or not.
     - IP Address → Check if it's ephemeral (it will be lost).
     - Persistent Disks → Check if they will be preserved.
-1. Basic Scripting
+
+5. **Basic Scripting**
